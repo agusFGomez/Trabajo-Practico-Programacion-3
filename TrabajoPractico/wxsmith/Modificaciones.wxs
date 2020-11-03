@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="Modificaciones">
+		<title>Modificacion de los datos del Cliente</title>
+		<size>500,500</size>
+		<bg>#FFDCB9</bg>
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<style>wxCAPTION|wxDEFAULT_FRAME_STYLE|wxFULL_REPAINT_ON_RESIZE</style>
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>Modificar</label>
+			<pos>200,360</pos>
+			<size>88,32</size>
+			<font>
+				<size>11</size>
+				<style>italic</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="labelEstado" member="yes">
+			<label></label>
+			<pos>128,296</pos>
+			<size>256,48</size>
+			<style>wxTRANSPARENT_WINDOW</style>
+		</object>
+		<object class="wxRadioBox" name="ID_RADIOBOX1" variable="RadioBox1" member="yes">
+			<label>Seleccione una opcion:</label>
+			<content>
+				<item>telefono</item>
+				<item>direccion</item>
+			</content>
+			<default>-1</default>
+			<pos>96,200</pos>
+			<size>153,72</size>
+			<font>
+				<size>10</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+			<style>wxDOUBLE_BORDER</style>
+			<handler function="OnRadioBox1Select" entry="EVT_RADIOBOX" />
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX3" variable="StaticBox3" member="yes">
+			<label>Ingrese los datos del cliente</label>
+			<pos>120,56</pos>
+			<size>256,20</size>
+			<font>
+				<size>14</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="txtDato" member="yes">
+			<pos>296,224</pos>
+			<size>128,40</size>
+			<style>wxTE_LEFT|wxDOUBLE_BORDER</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="txtDni" member="yes">
+			<pos>232,120</pos>
+			<size>104,32</size>
+			<style>wxDOUBLE_BORDER</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Ingrese dato:</label>
+			<pos>320,200</pos>
+			<font>
+				<size>10</size>
+				<style>italic</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>Dni:</label>
+			<pos>192,128</pos>
+			<font>
+				<size>10</size>
+				<style>italic</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="yes">
+			<object class="wxMenu" variable="Menu1" member="yes">
+				<label>Menu</label>
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItem1" member="yes">
+					<label>Volver al inicio</label>
+				</object>
+			</object>
+		</object>
+	</object>
+</wxsmith>

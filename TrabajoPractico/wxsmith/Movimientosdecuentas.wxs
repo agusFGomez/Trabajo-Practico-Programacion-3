@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="Movimientosdecuentas">
+		<title>Movimiento en las cuentas</title>
+		<size>450,450</size>
+		<bg>#FFDCB9</bg>
+		<font>
+			<size>10</size>
+			<style>italic</style>
+			<weight>normal</weight>
+			<underlined>0</underlined>
+			<family>swiss</family>
+			<face>Britannic Bold</face>
+		</font>
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Nro de Cuenta:</label>
+			<pos>104,96</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="txtNro" member="yes">
+			<pos>216,88</pos>
+			<size>100,32</size>
+			<style>wxDOUBLE_BORDER</style>
+		</object>
+		<object class="wxChoice" name="ID_CHOICE1" variable="Choice1" member="yes">
+			<content>
+				<item>Desposito</item>
+				<item>Extraccion</item>
+			</content>
+			<pos>216,152</pos>
+			<size>112,23</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Tipo de movimiento:</label>
+			<pos>72,152</pos>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="txtMonto" member="yes">
+			<pos>216,216</pos>
+			<size>100,32</size>
+			<style>wxDOUBLE_BORDER</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>Monto:</label>
+			<pos>136,224</pos>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>Aceptar</label>
+			<pos>168,328</pos>
+			<size>80,24</size>
+			<font>
+				<size>11</size>
+				<style>italic</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="labelEstado" member="yes">
+			<label></label>
+			<pos>144,272</pos>
+			<size>160,40</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+			<label>Ingrese los datos pedidos acontinuacion:</label>
+			<pos>64,32</pos>
+			<font>
+				<size>12</size>
+				<style>italic</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="yes">
+			<object class="wxMenu" variable="Menu1" member="yes">
+				<label>Menu</label>
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItem1" member="yes">
+					<label>Volver al inicio</label>
+				</object>
+			</object>
+		</object>
+	</object>
+</wxsmith>

@@ -1,0 +1,7 @@
+Dni       Nombre              Apellido            Telefono  Direccion           
+4140129                       gomezWv             4859      wJ              
+17569446                      arias               4897                          
+45                            gCADYGw             4589      Fu2              
+14510756                      gomez               4859                          
+41404129                      g                   4859      Fuq              
+14569446                      g                   4859      Fuq              

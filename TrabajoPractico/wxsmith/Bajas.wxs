@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="Bajas">
+		<size>500,350</size>
+		<bg>#FFDCB9</bg>
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>Dar de baja</label>
+			<pos>184,208</pos>
+			<size>104,32</size>
+			<font>
+				<size>10</size>
+				<style>italic</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="labelEstado" member="yes">
+			<label></label>
+			<pos>344,120</pos>
+			<size>112,40</size>
+			<fg>#000000</fg>
+			<style>wxTRANSPARENT_WINDOW</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="txtDni" member="yes">
+			<pos>224,120</pos>
+			<size>104,40</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Dni:</label>
+			<pos>176,128</pos>
+			<font>
+				<size>10</size>
+				<style>italic</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>Ingrese acontinuacion los datos del cliente para eliminar :</label>
+			<pos>40,40</pos>
+			<size>416,24</size>
+			<font>
+				<size>12</size>
+				<style>italic</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Britannic Bold</face>
+			</font>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="yes">
+			<object class="wxMenu" variable="Menu1" member="yes">
+				<label>Menu</label>
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItem1" member="yes">
+					<label>Volver al inicio</label>
+				</object>
+			</object>
+		</object>
+	</object>
+</wxsmith>
