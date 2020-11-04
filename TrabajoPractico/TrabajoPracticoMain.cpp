@@ -174,7 +174,10 @@ TrabajoPracticoFrame::TrabajoPracticoFrame(wxWindow* parent,wxWindowID id)
     Connect(ID_MENUITEM6,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&TrabajoPracticoFrame::OnMenuItem6Selected);
     Connect(ID_MENUITEM7,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&TrabajoPracticoFrame::OnMenuItem7Selected);
     Connect(ID_MENUITEM8,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&TrabajoPracticoFrame::OnMenuItem8Selected);
+    Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&TrabajoPracticoFrame::OnButton2Click);
     Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&TrabajoPracticoFrame::OnButton1Click);
+    Connect(ID_BUTTON3,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&TrabajoPracticoFrame::OnButton3Click);
+    Connect(ID_BUTTON4,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&TrabajoPracticoFrame::OnButton4Click);
     //*)
 }
 
@@ -199,12 +202,10 @@ void TrabajoPracticoFrame::OnClose(wxCloseEvent& event)
 {
      Close();
 }
-
 void TrabajoPracticoFrame::OnMenuItem3Selected(wxCommandEvent& event){
     Altas *fr=new Altas(this);
     fr->Show();
 }
-
 void TrabajoPracticoFrame::OnMenuItem4Selected(wxCommandEvent& event){
     Altadecuentas *fr=new Altadecuentas(this);
     fr->Show();
@@ -227,7 +228,6 @@ void TrabajoPracticoFrame::OnMenuItem8Selected(wxCommandEvent& event){
 }
 
 void TrabajoPracticoFrame::OnButton1Click(wxCommandEvent& event){
-
     wxString msg = "Listado de clientes";
     wxMessageBox(msg, _("Procesando..."));
     fstream arch;
@@ -266,4 +266,127 @@ void TrabajoPracticoFrame::OnButton1Click(wxCommandEvent& event){
     }
     archt.close();
     arch.close();
+}
+
+void TrabajoPracticoFrame::OnButton2Click(wxCommandEvent& event){
+wxString msg = "Listado de Movimientos";
+    wxMessageBox(msg, _("Procesando..."));
+    fstream arch;
+    arch.open("Movimientos.dat",ios::app|ios::binary);
+    if(!arch)
+    {
+        msg = "Error de apertura de archivo";
+        wxMessageBox(msg, _("ERROR!!!"));
+        Close();
+    }
+    arch.close();
+    arch.open("Movimientos.dat",ios::in|ios::out |ios::binary);
+    if(!arch)
+    {
+        msg = "Error de apertura de archivo";
+        wxMessageBox(msg, _("ERROR!!!"));
+        Close();
+    }
+
+    ofstream archt;
+    Cliente reg;
+    Cuenta reg2;
+    archt.open("Movimientos.txt",ios::out);
+    if(!archt)
+    {
+        msg = "Error de apertura de archivo";
+        wxMessageBox(msg, _("ERROR!!!"));
+    }
+    archt<<left<<setw(10)<<"Nro de cuenta"<<setw(15)<<"Dni del liente"<<setw(20)<<"Apellido"<<setw(20)<<"Nombre"<<setw(10)<<"Tipo de mov"<<setw(10)<<"Monto"<<endl;
+
+    arch.seekg(0);
+    arch.read(reinterpret_cast<char *>(&reg),sizeof(Cliente));
+
+    while(!arch.eof())
+    {
+        archt<<left<<setw(10)<<reg2.getNro()<<setw(15)<<reg.getDni()<<setw(20)<<reg.getApellido()<<setw(20)<<reg.getNombre()<<setw(10)<<reg2.get<setw(10)<<reg.getDireccion()<<endl;
+        arch.read(reinterpret_cast<char *>(&reg),sizeof(Cliente));
+    }
+    archt.close();
+    arch.close();
+}
+
+void TrabajoPracticoFrame::OnButton3Click(wxCommandEvent& event){
+wxString msg = "Listado de Cuentas de Ahorro";
+    wxMessageBox(msg, _("La operacion esta sindo procesada..."));
+    fstream arch;
+    arch.open("Clientes.dat",ios::app|ios::binary);
+    if(!arch)    {
+        msg = "Error de apertura de archivo";
+        wxMessageBox(msg, _("ERROR!!!"));
+        Close();
+    }
+    arch.close();
+    arch.open("Clientes.dat",ios::in|ios::out |ios::binary);
+    if(!arch)    {
+        msg = "Error de apertura de archivo";
+        wxMessageBox(msg, _("ERROR!!!"));
+        Close();
+    }
+
+    ofstream archt;
+    Cliente reg;
+    archt.open("Cuentas de ahorro.txt",ios::out);
+    if(!archt)    {
+        msg = "Error de apertura de archivo";
+        wxMessageBox(msg, _("ERROR!!!"));
+    }
+    archt<<left<<setw(10)<<"Nro de cuenta"<<setw(10)<<"Dni"<<setw(20)<<"Nombre"<<setw(20)<<"Apellido"<<setw(10)<<"Telefono"<<setw(20)<<"Direccion"<<endl;
+
+    arch.seekg(0);
+    arch.read(reinterpret_cast<char *>(&reg),sizeof(Cliente));
+    while(!arch.eof())
+    {
+        archt<<left<<setw(10)<<reg.getDni()<<setw(20)<<reg.getNombre()<<setw(20)<<reg.getApellido()<<setw(10)<<reg.getTelefono()<<setw(20)<<reg.getDireccion()<<endl;
+        arch.read(reinterpret_cast<char *>(&reg),sizeof(Cliente));
+    }
+    archt.close();
+    arch.close();
+}
+
+void TrabajoPracticoFrame::OnButton4Click(wxCommandEvent& event){
+    wxString msg = "Listado de clientes";
+    wxMessageBox(msg, _("Procesando..."));
+    fstream arch;
+    arch.open("Clientes.dat",ios::app|ios::binary);
+    if(!arch)
+    {
+        msg = "Error de apertura de archivo";
+        wxMessageBox(msg, _("ERROR!!!"));
+        Close();
+    }
+    arch.close();
+    arch.open("Clientes.dat",ios::in|ios::out |ios::binary);
+    if(!arch)
+    {
+        msg = "Error de apertura de archivo";
+        wxMessageBox(msg, _("ERROR!!!"));
+        Close();
+    }
+
+    ofstream archt;
+    Cliente reg;
+    archt.open("Clientes.txt",ios::out);
+    if(!archt)
+    {
+        msg = "Error de apertura de archivo";
+        wxMessageBox(msg, _("ERROR!!!"));
+    }
+    archt<<left<<setw(10)<<"Dni"<<setw(20)<<"Nombre"<<setw(20)<<"Apellido"<<setw(10)<<"Telefono"<<setw(20)<<"Direccion"<<endl;
+
+    arch.seekg(0);
+    arch.read(reinterpret_cast<char *>(&reg),sizeof(Cliente));
+    while(!arch.eof())
+    {
+        archt<<left<<setw(10)<<reg.getDni()<<setw(20)<<reg.getNombre()<<setw(20)<<reg.getApellido()<<setw(10)<<reg.getTelefono()<<setw(20)<<reg.getDireccion()<<endl;
+        arch.read(reinterpret_cast<char *>(&reg),sizeof(Cliente));
+    }
+    archt.close();
+    arch.close();
+
 }
