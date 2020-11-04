@@ -95,6 +95,9 @@ class TrabajoPracticoFrame: public wxFrame
         void OnMenuItem7Selected(wxCommandEvent& event);
         void OnMenuItem8Selected(wxCommandEvent& event);
         void OnButton1Click(wxCommandEvent& event);
+        void OnButton2Click(wxCommandEvent& event);
+        void OnButton3Click(wxCommandEvent& event);
+        void OnButton4Click(wxCommandEvent& event);
         //*)
 
         DECLARE_EVENT_TABLE()
